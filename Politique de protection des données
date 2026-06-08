@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Protection de vos Données &amp; Engagement S@FE</title>
+</head>
+<body>
+
+    <h1>🛡️ Protection de vos Données &amp; Engagement S@FE</h1>
+    <p>Chez S@FE, votre sécurité numérique est notre métier. La protection de vos données personnelles n'est pas seulement une obligation légale (RGPD), c’est le fondement de la confiance que vous nous accordez.</p>
+
+    <h2>1. Quelles données collectons-nous et pourquoi ?</h2>
+    <p>Nous ne collectons que le strict nécessaire pour vous accompagner efficacement :</p>
+    <ul>
+        <li><strong>Données d’identification :</strong> Pour établir votre devis personnalisé et vos contrats de Cyber-assurance.</li>
+        <li><strong>Données techniques :</strong> Issues de vos audits de vulnérabilité, afin de renforcer la résilience de votre entreprise.</li>
+        <li><strong>Données de contact :</strong> Pour vous transmettre nos alertes sur les nouvelles menaces cyber et nos guides pratiques.</li>
+    </ul>
+
+    <h2>2. Qui a accès à vos informations ?</h2>
+    <p>Vos données sont traitées avec la plus grande confidentialité. Elles sont accessibles uniquement à :</p>
+    <ul>
+        <li>L'équipe conseil de S@FE.</li>
+        <li>Nos partenaires assureurs (uniquement pour l'établissement de vos garanties).</li>
+    </ul>
+    <p><strong>Aucune revente :</strong> Vos données ne sont jamais cédées ou vendues à des tiers à des fins commerciales.</p>
+
+    <h2>3. Où sont stockées vos données ?</h2>
+    <p>En tant qu'experts en conformité, nous privilégions des solutions sécurisées. Bien que nous utilisions des outils d'automatisation agiles pour votre réactivité, nous veillons à ce que les protocoles de sécurité soient activés pour protéger l'intégrité de vos échanges.</p>
+    
+    <h3>Le site vitrine : Zéro cookie, zéro donnée</h3>
+    <p>Notre site internet vitrine est hébergé sur la plateforme GitHub Pages.</p>
+    <p>Aucune donnée personnelle n'est collectée lors de votre navigation sur ce site.</p>
+    <p>Aucun cookie (qu'il soit publicitaire, de suivi ou statistique) n'est déposé sur votre navigateur. Vous pouvez ainsi découvrir notre solution en toute liberté, sans laisser de trace numérique.</p>
+    
+    <h3>Notre partenaire d'hébergement pour les données clients : Infomaniak</h3>
+    <p>L'intégralité de vos données est stockée et traitée sur les serveurs d'Infomaniak, le cloud éco-responsable de référence en Europe.</p>
+    <ul>
+        <li><strong>Localisation géographique :</strong> Vos données sont hébergées exclusivement dans des centres de données situés en Suisse. Elles bénéficient ainsi d'un cadre juridique strict et protecteur en matière de protection de la vie privée.</li>
+        <li><strong>Conformité RGPD :</strong> Cet hébergement garantit une conformité totale avec le Règlement Général sur la Protection des Données (RGPD). Vos données ne sont ni vendues, ni analysées, et aucun transfert n'est effectué vers des pays tiers hors Union Européenne/Suisse sans garanties appropriées.</li>
+        <li><strong>Sécurité maximale :</strong> Les centres de données d'Infomaniak bénéficient des certifications de sécurité les plus exigeantes (notamment ISO 27001 et ISO 9001), garantissant une protection optimale contre les intrusions physiques et numériques, ainsi qu'une redondance élevée pour éviter toute perte de données.</li>
+    </ul>
+
+    <h3>Une infrastructure souveraine et durable</h3>
+    <p>En choisissant Infomaniak pour propulser S@FE, nous vous garantissons non seulement une souveraineté technologique face aux géants du web (GAFAM), mais aussi un engagement écologique fort. Les centres de données utilisés sont exclusivement alimentés par de l'énergie renouvelable et refroidis sans climatisation artificielle.</p>
+    <p><em>🔒 Le mot de l'équipe S@FE : Vous restez le propriétaire unique et exclusif de vos données. Notre rôle, en collaboration avec Infomaniak, est simplement d'en assurer la disponibilité et la sécurité absolue au quotidien.</em></p>
+
+    <h2>4. Vos droits : Gardez le contrôle</h2>
+    <p>Conformément au RGPD, vous restez maître de vos informations. Vous disposez à tout moment d'un droit :</p>
+    <ul>
+        <li>D'accès et de rectification.</li>
+        <li>De suppression (droit à l'oubli).</li>
+        <li>D'opposition à l'utilisation de vos données à des fins de prospection.</li>
+    </ul>
+    <p>Une question ? Contactez notre référent protection des données par email : rgpd@safe-assurances.fr ou parcourrier en lettre recommandée avec accusé de réception à S@FE, service RGPD, 66 Avenue des Champs Elysées 75008 PARIS.</p>
+
+    <p><strong>💡 Le petit "plus" S@FE</strong><br>
+    Le saviez-vous ? Un bon référencement local commence par une fiche Google Business propre, mais une entreprise pérenne commence par des données protégées. Chez S@FE, nous faisons les deux.</p>
+
+    <h2>🔐 Sécurité et Confidentialité : Pourquoi S@FE a choisi Google Workspace Business</h2>
+    <p>Pour gérer vos projets de Cyber-assurance et vos audits de vulnérabilité, nous avons sélectionné la suite Google Workspace Business. Contrairement aux versions grand public gratuites, cette infrastructure professionnelle répond à des exigences de sécurité et de conformité strictes, indispensables à notre expertise.</p>
+    
+    <h3>🛡️ Un environnement de données cloisonné</h3>
+    <p>Dans le cadre de notre abonnement professionnel, vos données bénéficient d'un traitement spécifique :</p>
+    <ul>
+        <li><strong>Propriété exclusive :</strong> S@FE reste l'unique propriétaire de vos données. Google n'utilise jamais les informations saisies dans nos formulaires (Forms) ou nos feuilles de calcul (Sheets) pour entraîner ses modèles d'IA ou pour diffuser de la publicité.</li>
+        <li><strong>Chiffrement de haut niveau :</strong> Toutes les informations transmises via notre tunnel de souscription sont chiffrées en transit (TLS) et au repos (AES 256 bits), garantissant que vos documents de conformité restent confidentiels.</li>
+    </ul>
+
+    <h3>⚖️ Conformité RGPD et Certifications</h3>
+    <p>En tant qu'experts en Sécurité Numérique, nous veillons à ce que nos outils respectent les standards internationaux :</p>
+    <ul>
+        <li><strong>DPA (Data Processing Addendum) :</strong> S@FE a souscrit à l'avenant de traitement des données de Google, garantissant un cadre contractuel conforme aux exigences de la CNIL et du RGPD.</li>
+        <li><strong>Certifications de sécurité :</strong> L'infrastructure que nous utilisons est certifiée ISO/IEC 27001, 27017 et 27018, ainsi que SOC 2/3, assurant un niveau de protection bancaire à vos dossiers d'assurance.</li>
+    </ul>
+
+    <h3>🚀 L'engagement de proximité S@FE</h3>
+    <p>Si nous utilisons la puissance du Cloud pour votre réactivité (génération immédiate de vos projets de contrats via AutoCrat), l'humain reste au centre :</p>
+    <ul>
+        <li><strong>Contrôle strict des accès :</strong> Seuls nos conseillers habilités ont accès à votre dossier.</li>
+        <li><strong>Audit interne :</strong> WeasyPrint auditons régulièrement nos propres paramétrages pour éviter toute faille de partage.</li>
+        <li><strong>Transparence totale :</strong> Vous pouvez à tout moment nous demander la suppression ou la modification de vos informations de souscription.</li>
+    </ul>
+
+    <blockquote>
+        <p>"Parce que nous conseillons les entreprises sur leurs risques cyber, nous nous appliquons à nous-mêmes les standards les plus exigeants." — L'équipe S@FE.</p>
+    </blockquote>
+
+</body>
+</html>
