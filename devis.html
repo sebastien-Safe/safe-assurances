@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demander un devis — Safe Assurances</title>
+<meta name="description" content="Demandez un devis d'assurance personnalisé et sans engagement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="accueil.html" class="brand"><svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M20 3 33 8v11c0 9-6 15-13 18-7-3-13-9-13-18V8L20 3Z" fill="#16352E"/><path d="M14 20l4 4 8-9" stroke="#CB6B41" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Safe Assurances</a>
+    <ul class="menu" id="menu">
+      <li><a href="accueil.html">Accueil</a></li>
+      <li><a href="cabinet.html">Le cabinet</a></li>
+      <li><a href="garanties.html">Garanties</a></li>
+      <li><a href="espace-client.html">Espace client</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="devis.html" class="btn btn-primary">Demander un devis</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="devis" class="pad page-intro">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--terracotta-soft)">Devis</span>
+      <h2>Demandez votre devis</h2>
+      <p>Décrivez-nous votre besoin : nous revenons vers vous rapidement avec une proposition claire et personnalisée.</p>
+    </div>
+    <!-- TODO : remplacer l'action par votre point de réception (ex. Formspree) relié à votre kMail -->
+    <form class="reveal" id="devis-form" action="https://formspree.io/f/VOTRE_IDENTIFIANT" method="POST">
+      <div class="form-grid">
+        <div class="field"><label for="prenom">Prénom</label><input id="prenom" name="prenom" type="text" placeholder="Votre prénom" required></div>
+        <div class="field"><label for="nom">Nom</label><input id="nom" name="nom" type="text" placeholder="Votre nom" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="vous@exemple.fr" required></div>
+        <div class="field"><label for="tel">Téléphone</label><input id="tel" name="telephone" type="tel" placeholder="06 00 00 00 00"></div>
+        <div class="field full"><label for="type">Type d'assurance souhaitée</label>
+          <select id="type" name="type_assurance" required>
+            <option value="" disabled selected>Sélectionnez…</option>
+            <option>Auto / deux-roues</option><option>Habitation</option><option>Santé / prévoyance</option>
+            <option>Professionnels</option><option>Épargne / retraite</option><option>Assurance emprunteur</option><option>Autre</option>
+          </select>
+        </div>
+        <div class="field full"><label for="message">Votre projet</label><textarea id="message" name="message" placeholder="Décrivez votre situation et vos besoins…"></textarea></div>
+        <div class="field full"><label class="consent"><input type="checkbox" name="consentement" required> J'accepte que mes informations soient utilisées pour être recontacté(e) au sujet de ma demande, conformément à la politique de confidentialité.</label></div>
+        <div class="field full"><button type="submit" class="btn btn-primary" style="width:fit-content">Envoyer ma demande <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+      </div>
+      <p class="form-note">Ce formulaire transmet une <em>demande</em> de devis. Aucune donnée bancaire n'est collectée à cette étape.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M20 3 33 8v11c0 9-6 15-13 18-7-3-13-9-13-18V8L20 3Z" fill="rgba(245,240,230,.12)" stroke="#e08a5f" stroke-width="1.4"/><path d="M14 20l4 4 8-9" stroke="#e08a5f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Safe Assurances
+        </div>
+        <p style="max-width:300px">Cabinet de conseil en assurance. Votre protection, en toute sérénité.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="cabinet.html">Le cabinet</a></li>
+          <li><a href="garanties.html">Garanties</a></li>
+          <li><a href="espace-client.html">Espace client</a></li>
+          <li><a href="devis.html">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Informations</h5>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="mentions-legales.html#confidentialite">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Safe Assurances. Tous droits réservés.</span>
+      <span>safe-assurances.fr</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
