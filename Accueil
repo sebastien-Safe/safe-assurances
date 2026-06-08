@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safe Assurances — Votre protection, en toute sérénité</title>
+<meta name="description" content="Cabinet Safe Assurances : conseil en assurance, devis personnalisés et espace client sécurisé pour accéder à vos contrats, devis et documents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5F0E6;
+    --cream-deep:#ECE4D4;
+    --evergreen:#16352E;
+    --evergreen-soft:#234c43;
+    --terracotta:#CB6B41;
+    --terracotta-soft:#e08a5f;
+    --ink:#1C1B17;
+    --muted:#5c5a50;
+    --line:rgba(22,53,46,.14);
+    --shadow:0 18px 50px -22px rgba(22,53,46,.45);
+    --r:18px;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Hanken Grotesk",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{
+    font-family:var(--sans);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .serif{font-family:var(--serif)}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(245,240,230,.78);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:600;font-size:1.32rem;color:var(--evergreen)}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .menu{display:flex;gap:30px;list-style:none;align-items:center}
+  .menu a{font-size:.95rem;font-weight:500;color:var(--evergreen);position:relative;padding:4px 0;transition:color .2s}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--terracotta);transition:width .28s ease}
+  .menu a:hover{color:var(--terracotta)}
+  .menu a:hover::after{width:100%}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:600;font-size:.95rem;border-radius:100px;
+    padding:13px 24px;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s;
+  }
+  .btn-primary{background:var(--terracotta);color:#fff}
+  .btn-primary:hover{background:var(--terracotta-soft);transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(203,107,65,.7)}
+  .btn-ghost{background:transparent;color:var(--evergreen);border:1.5px solid var(--evergreen)}
+  .btn-ghost:hover{background:var(--evergreen);color:var(--cream);transform:translateY(-2px)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:26px;height:2.5px;background:var(--evergreen);border-radius:2px;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:88px 0 96px;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;font-size:.82rem;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--terracotta);margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:28px;height:1.5px;background:var(--terracotta)}
+  .hero h1{
+    font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,5.4vw,4.15rem);
+    line-height:1.04;letter-spacing:-.015em;color:var(--evergreen);margin-bottom:24px;
+  }
+  .hero h1 em{font-style:italic;color:var(--terracotta)}
+  .hero p.lead{font-size:1.16rem;color:var(--muted);max-width:520px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .trust-row{display:flex;gap:30px;margin-top:46px;flex-wrap:wrap}
+  .trust-row .ti{display:flex;flex-direction:column}
+  .trust-row .ti b{font-family:var(--serif);font-size:1.7rem;color:var(--evergreen);line-height:1}
+  .trust-row .ti span{font-size:.85rem;color:var(--muted);margin-top:5px}
+
+  /* hero visual */
+  .hero-card{
+    position:relative;background:var(--evergreen);border-radius:26px;padding:38px;color:var(--cream);
+    box-shadow:var(--shadow);overflow:hidden;
+  }
+  .hero-card::after{
+    content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(203,107,65,.55),transparent 70%);
+    top:-90px;right:-80px;
+  }
+  .hero-card .shield{width:46px;height:46px;margin-bottom:20px;position:relative;z-index:1}
+  .hero-card h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin-bottom:8px;position:relative;z-index:1}
+  .hero-card p{color:rgba(245,240,230,.78);font-size:.97rem;margin-bottom:24px;position:relative;z-index:1}
+  .mini-list{list-style:none;position:relative;z-index:1}
+  .mini-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid rgba(245,240,230,.16);font-size:.95rem}
+  .mini-list li:first-child{border-top:none}
+  .mini-list .dot{width:8px;height:8px;border-radius:50%;background:var(--terracotta-soft);flex:none}
+
+  /* ---------- SECTIONS ---------- */
+  section{position:relative}
+  .pad{padding:90px 0}
+  .section-head{max-width:640px;margin-bottom:52px}
+  .section-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,3.6vw,2.9rem);color:var(--evergreen);line-height:1.08;letter-spacing:-.01em;margin-bottom:16px}
+  .section-head p{color:var(--muted);font-size:1.08rem}
+
+  /* garanties */
+  #garanties{background:var(--cream-deep)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--cream);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;
+    transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .card .ic{width:48px;height:48px;border-radius:13px;background:var(--evergreen);display:grid;place-items:center;margin-bottom:18px;transition:background .3s}
+  .card:hover .ic{background:var(--terracotta)}
+  .card .ic svg{width:24px;height:24px;stroke:var(--cream)}
+  .card h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;color:var(--evergreen);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  /* espace client */
+  .space-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .space-visual{
+    background:var(--evergreen);border-radius:26px;padding:42px;color:var(--cream);box-shadow:var(--shadow);
+    position:relative;overflow:hidden;
+  }
+  .space-visual h4{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin-bottom:22px}
+  .doc-row{display:flex;align-items:center;gap:14px;background:rgba(245,240,230,.07);border:1px solid rgba(245,240,230,.13);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+  .doc-row .fic{width:36px;height:36px;border-radius:9px;background:rgba(203,107,65,.22);display:grid;place-items:center;flex:none}
+  .doc-row .fic svg{width:18px;height:18px;stroke:var(--terracotta-soft)}
+  .doc-row .meta b{display:block;font-size:.95rem;font-weight:600}
+  .doc-row .meta span{font-size:.8rem;color:rgba(245,240,230,.6)}
+  .lock-badge{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;background:rgba(203,107,65,.2);color:var(--terracotta-soft);padding:6px 13px;border-radius:100px;margin-top:8px}
+  ul.checklist{list-style:none;margin:22px 0 30px}
+  ul.checklist li{display:flex;gap:13px;align-items:flex-start;margin-bottom:15px;color:var(--muted)}
+  ul.checklist .ck{width:23px;height:23px;border-radius:50%;background:var(--evergreen);display:grid;place-items:center;flex:none;margin-top:2px}
+  ul.checklist .ck svg{width:13px;height:13px;stroke:var(--cream)}
+
+  /* devis form */
+  #devis{background:var(--evergreen);color:var(--cream)}
+  #devis .section-head h2{color:var(--cream)}
+  #devis .section-head p{color:rgba(245,240,230,.72)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{display:flex;flex-direction:column;gap:7px}
+  .field.full{grid-column:1/-1}
+  label{font-size:.88rem;font-weight:600;color:rgba(245,240,230,.85)}
+  input,select,textarea{
+    font-family:var(--sans);font-size:1rem;padding:13px 15px;border-radius:11px;border:1px solid rgba(245,240,230,.2);
+    background:rgba(245,240,230,.06);color:var(--cream);transition:border-color .2s,background .2s;
+  }
+  input::placeholder,textarea::placeholder{color:rgba(245,240,230,.4)}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terracotta);background:rgba(245,240,230,.1)}
+  select option{color:#1c1b17}
+  textarea{resize:vertical;min-height:110px}
+  .form-note{font-size:.84rem;color:rgba(245,240,230,.55);margin-top:14px}
+  .consent{display:flex;gap:11px;align-items:flex-start;font-size:.86rem;color:rgba(245,240,230,.78)}
+  .consent input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--terracotta)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
+  .contact-card{border:1px solid var(--line);border-radius:var(--r);padding:28px;background:var(--cream)}
+  .contact-card .ic{width:42px;height:42px;border-radius:11px;background:var(--cream-deep);display:grid;place-items:center;margin-bottom:14px}
+  .contact-card .ic svg{width:21px;height:21px;stroke:var(--evergreen)}
+  .contact-card h4{font-family:var(--serif);font-weight:500;font-size:1.15rem;color:var(--evergreen);margin-bottom:5px}
+  .contact-card p,.contact-card a{color:var(--muted);font-size:.96rem}
+  .contact-card a:hover{color:var(--terracotta)}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#0f2620;color:rgba(245,240,230,.72);padding:64px 0 30px;font-size:.92rem}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(245,240,230,.12)}
+  .foot-top .brand{color:var(--cream);margin-bottom:14px}
+  .foot-col h5{color:var(--cream);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+  .foot-col ul{list-style:none}
+  .foot-col li{margin-bottom:9px}
+  .foot-col a:hover{color:var(--terracotta-soft)}
+  .legal{
+    margin-top:30px;padding:22px;border:1px dashed rgba(203,107,65,.5);border-radius:14px;
+    background:rgba(203,107,65,.06);font-size:.84rem;line-height:1.7;color:rgba(245,240,230,.62);
+  }
+  .legal strong{color:var(--terracotta-soft)}
+  .ph{background:rgba(203,107,65,.22);color:var(--terracotta-soft);padding:1px 7px;border-radius:5px;font-weight:600;font-size:.82rem}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:28px;font-size:.85rem;color:rgba(245,240,230,.5)}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .hero .eyebrow,.hero h1,.hero .lead,.hero-cta,.trust-row{opacity:0;transform:translateY(22px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero h1{animation-delay:.08s}.hero .lead{animation-delay:.18s}.hero-cta{animation-delay:.28s}.trust-row{animation-delay:.38s}
+  .hero-card{opacity:0;animation:rise .9s cubic-bezier(.2,.7,.2,1) .25s forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .hero-grid,.space-grid{grid-template-columns:1fr;gap:40px}
+    .cards,.contact-grid{grid-template-columns:1fr 1fr}
+    .foot-top{grid-template-columns:1fr 1fr}
+    .menu{
+      position:fixed;inset:74px 0 auto 0;background:var(--cream);flex-direction:column;
+      gap:0;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s;box-shadow:var(--shadow);
+    }
+    .menu.open{transform:none}
+    .menu li{width:100%;text-align:center}
+    .menu li a{display:block;padding:15px}
+    .menu .btn{margin:10px auto;display:inline-flex}
+    .burger{display:flex}
+  }
+  @media(max-width:560px){
+    .cards,.contact-grid,.form-grid,.foot-top{grid-template-columns:1fr}
+    .wrap{padding:0 20px}
+    .pad{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a href="#accueil" class="brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M20 3 33 8v11c0 9-6 15-13 18-7-3-13-9-13-18V8L20 3Z" fill="#16352E"/><path d="M14 20l4 4 8-9" stroke="#CB6B41" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Safe Assurances
+    </a>
+    <ul class="menu" id="menu">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#cabinet">Le cabinet</a></li>
+      <li><a href="#garanties">Garanties</a></li>
+      <li><a href="#espace">Espace client</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#devis" class="btn btn-primary">Demander un devis</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="accueil" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Cabinet de conseil en assurance</span>
+      <h1>Votre protection,<br>en toute <em>sérénité</em>.</h1>
+      <p class="lead">Conseil indépendant, devis personnalisés et un espace client sécurisé pour retrouver tous vos contrats et documents, à tout moment.</p>
+      <div class="hero-cta">
+        <a href="#devis" class="btn btn-primary">Demander un devis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#espace" class="btn btn-ghost">Accéder à mon espace</a>
+      </div>
+      <div class="trust-row">
+        <div class="ti"><b>100%</b><span>Conseil indépendant</span></div>
+        <div class="ti"><b>24/7</b><span>Accès à vos documents</span></div>
+        <div class="ti"><b>UE</b><span>Données hébergées en Europe</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <svg class="shield" viewBox="0 0 40 40" fill="none"><path d="M20 3 33 8v11c0 9-6 15-13 18-7-3-13-9-13-18V8L20 3Z" fill="rgba(245,240,230,.12)" stroke="#e08a5f" stroke-width="1.5"/><path d="M14 20l4 4 8-9" stroke="#e08a5f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Votre espace, sécurisé</h3>
+      <p>Tous vos documents au même endroit, accessibles d'un simple clic.</p>
+      <ul class="mini-list">
+        <li><span class="dot"></span> Devis et propositions commerciales</li>
+        <li><span class="dot"></span> Contrats et avenants signés</li>
+        <li><span class="dot"></span> Fiches de conseil personnalisées</li>
+        <li><span class="dot"></span> Justificatifs et attestations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CABINET ============ -->
+<section id="cabinet" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Un accompagnement à taille humaine</h2>
+      <p>Safe Assurances vous conseille et vous oriente vers les garanties réellement adaptées à votre situation — particuliers comme professionnels. Pas de jargon, pas de produits imposés : un interlocuteur qui défend votre intérêt.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z" stroke-linejoin="round"/></svg></div>
+        <h3>Conseil indépendant</h3>
+        <p>Une analyse objective de vos besoins avant toute recommandation, dans votre seul intérêt.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 12h4l2 6 4-14 2 8h6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Devis sur mesure</h3>
+        <p>Des propositions comparées et claires, établies à partir de votre profil et de vos priorités.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 8v4l3 2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Suivi dans la durée</h3>
+        <p>Un accompagnement à chaque étape : souscription, modifications, échéances et sinistres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GARANTIES ============ -->
+<section id="garanties" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Des garanties pour chaque moment de vie</h2>
+      <p>Que vous protégiez votre famille, votre logement, votre véhicule ou votre activité, nous trouvons la couverture juste.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 13l2-5h10l2 5M5 13h14v4H5zM7 17v2M17 17v2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Auto & deux-roues</h3>
+        <p>De la formule au tiers à tous risques, adaptée à votre usage et votre budget.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 11 12 4l8 7M6 9v10h12V9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Habitation</h3>
+        <p>Propriétaire ou locataire, protégez votre logement et vos biens en toute tranquillité.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke-linejoin="round"/></svg></div>
+        <h3>Santé & prévoyance</h3>
+        <p>Complémentaire santé, prévoyance et garanties accidents pour vous et vos proches.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5a3 3 0 0 1 6 0v2" stroke-linecap="round"/></svg></div>
+        <h3>Professionnels</h3>
+        <p>Responsabilité civile, multirisque pro, décennale : sécurisez votre activité.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M5 20a7 7 0 0 1 14 0" stroke-linecap="round"/></svg></div>
+        <h3>Épargne & retraite</h3>
+        <p>Préparez l'avenir avec des solutions d'épargne et de retraite adaptées à vos projets.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v18M5 8h9a3 3 0 0 1 0 6H7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Emprunteur</h3>
+        <p>Une assurance de prêt mieux tarifée, sans rogner sur le niveau de protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESPACE CLIENT ============ -->
+<section id="espace" class="pad">
+  <div class="wrap space-grid">
+    <div class="reveal">
+      <span class="eyebrow">Espace client</span>
+      <h2 class="serif" style="font-size:clamp(2rem,3.6vw,2.9rem);color:var(--evergreen);font-weight:500;line-height:1.08;margin-bottom:16px">Vos documents, à portée de main</h2>
+      <p style="color:var(--muted);font-size:1.08rem">Retrouvez l'ensemble de vos documents dans un espace privé et sécurisé, hébergé en Europe. Chaque client dispose de son propre dossier protégé par mot de passe.</p>
+      <ul class="checklist">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 13l4 4 10-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Accès permanent, 7j/7 et 24h/24</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 13l4 4 10-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Connexion privée et confidentielle</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 13l4 4 10-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Données conformes au RGPD</li>
+      </ul>
+      <a href="https://kdrive.infomaniak.com/app/drive/3217898/redirect/139" class="btn btn-primary" id="espace-link" target="_blank" rel="noopener">Accéder à mon espace
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p style="font-size:.86rem;color:var(--muted);margin-top:14px">Vous n'avez pas encore vos identifiants ? <a href="#contact" style="color:var(--terracotta);font-weight:600">Contactez-nous.</a></p>
+    </div>
+    <div class="space-visual reveal">
+      <h4>Mes documents</h4>
+      <div class="doc-row">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h7l4 4v14H7zM14 3v4h4" stroke-linejoin="round"/></svg></div>
+        <div class="meta"><b>Contrat habitation 2026</b><span>PDF · signé</span></div>
+      </div>
+      <div class="doc-row">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h7l4 4v14H7zM14 3v4h4" stroke-linejoin="round"/></svg></div>
+        <div class="meta"><b>Devis assurance auto</b><span>PDF · à valider</span></div>
+      </div>
+      <div class="doc-row">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h7l4 4v14H7zM14 3v4h4" stroke-linejoin="round"/></svg></div>
+        <div class="meta"><b>Fiche de conseil</b><span>PDF · personnalisée</span></div>
+      </div>
+      <span class="lock-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+        Espace protégé par mot de passe
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVIS ============ -->
+<section id="devis" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Demandez votre devis</h2>
+      <p>Décrivez-nous votre besoin : nous revenons vers vous rapidement avec une proposition claire et personnalisée.</p>
+    </div>
+    <!-- TODO : remplacer l'action par votre point de réception (ex. Formspree) relié à votre kMail -->
+    <form class="reveal" id="devis-form" action="https://formspree.io/f/VOTRE_IDENTIFIANT" method="POST">
+      <div class="form-grid">
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" name="prenom" type="text" placeholder="Votre prénom" required>
+        </div>
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.fr" required>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone</label>
+          <input id="tel" name="telephone" type="tel" placeholder="06 00 00 00 00">
+        </div>
+        <div class="field full">
+          <label for="type">Type d'assurance souhaitée</label>
+          <select id="type" name="type_assurance" required>
+            <option value="" disabled selected>Sélectionnez…</option>
+            <option>Auto / deux-roues</option>
+            <option>Habitation</option>
+            <option>Santé / prévoyance</option>
+            <option>Professionnels</option>
+            <option>Épargne / retraite</option>
+            <option>Assurance emprunteur</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Votre projet</label>
+          <textarea id="message" name="message" placeholder="Décrivez votre situation et vos besoins…"></textarea>
+        </div>
+        <div class="field full">
+          <label class="consent"><input type="checkbox" name="consentement" required> J'accepte que mes informations soient utilisées pour être recontacté(e) au sujet de ma demande, conformément à la politique de confidentialité.</label>
+        </div>
+        <div class="field full">
+          <button type="submit" class="btn btn-primary" style="background:var(--terracotta);width:fit-content">Envoyer ma demande
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="form-note">Ce formulaire transmet une <em>demande</em> de devis. Aucune donnée bancaire n'est collectée à cette étape.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="pad">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Parlons de votre protection</h2>
+      <p>Une question, un rendez-vous, un sinistre à déclarer ? Nous sommes à votre écoute.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 5h16v14H4zM4 7l8 6 8-6" stroke-linejoin="round"/></svg></div>
+        <h4>Email</h4>
+        <p><a href="mailto:contact@safe-assurances.fr">contact@safe-assurances.fr</a></p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke-linejoin="round"/></svg></div>
+        <h4>Téléphone</h4>
+        <p><span class="ph">[N° à compléter]</span></p>
+      </div>
+      <div class="contact-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h4>Adresse</h4>
+        <p><span class="ph">[Adresse à compléter]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" fill="none"><path d="M20 3 33 8v11c0 9-6 15-13 18-7-3-13-9-13-18V8L20 3Z" fill="rgba(245,240,230,.12)" stroke="#e08a5f" stroke-width="1.4"/><path d="M14 20l4 4 8-9" stroke="#e08a5f" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Safe Assurances
+        </div>
+        <p style="max-width:300px">Cabinet de conseil en assurance. Votre protection, en toute sérénité.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#cabinet">Le cabinet</a></li>
+          <li><a href="#garanties">Garanties</a></li>
+          <li><a href="#espace">Espace client</a></li>
+          <li><a href="#devis">Demander un devis</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Informations</h5>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#mentions">Mentions légales</a></li>
+          <li><a href="#mentions">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MENTIONS LÉGALES OBLIGATOIRES — intermédiaire d'assurance -->
+    <div class="legal" id="mentions">
+      <strong>Mentions légales — à compléter avant mise en ligne :</strong><br>
+      Safe Assurances — <span class="ph">[statut : courtier / agent général / mandataire]</span> en assurances.
+      Immatriculé(e) à l'ORIAS sous le n° <span class="ph">[n° ORIAS]</span> (<a href="https://www.orias.fr" style="color:var(--terracotta-soft)">www.orias.fr</a>).
+      <span class="ph">[Forme juridique]</span> au capital de <span class="ph">[montant]</span> — RCS <span class="ph">[ville + n°]</span> — Siège : <span class="ph">[adresse]</span>.
+      Activité soumise au contrôle de l'Autorité de Contrôle Prudentiel et de Résolution (ACPR), 4 Place de Budapest, CS 92459, 75436 Paris Cedex 09.
+      En cas de litige, vous pouvez saisir le Médiateur de l'Assurance : <span class="ph">[coordonnées du médiateur]</span>.
+      Information sur les liens financiers / participations avec des entreprises d'assurance : <span class="ph">[à préciser selon votre situation]</span>.
+      Hébergement du site : GitHub Pages. Espace client : kDrive (Infomaniak, hébergement en Suisse/UE).
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Safe Assurances. Tous droits réservés.</span>
+      <span>safe-assurances.fr</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // année
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // menu mobile
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  burger.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // reveal au scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, { threshold: .14 });
+  document.querySelectorAll('.reveal').forEach((el,i) => {
+    el.style.transitionDelay = (i % 3) * 0.08 + 's';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
