@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S@FE Assurances — Site en construction</title>
+<meta name="description" content="S@FE Assurances, courtier en assurances indépendant pour les particuliers et les entreprises. Notre site arrive bientôt.">
+<meta name="theme-color" content="#0a1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1628'/%3E%3Cpath d='M32 11 L50 18 V34 C50 45 42 51 32 54 C22 51 14 45 14 34 V18 Z' fill='rgba(59,130,246,.12)' stroke='%233b82f6' stroke-width='3'/%3E%3Cpath d='M23 33 L29 39.5 L42 25.5' fill='none' stroke='%23fbbf24' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1628;
+  --navy-mid:#142240;
+  --line:rgba(255,255,255,.08);
+  --mut:#94a3b8;
+  --mut-2:#cbd5e1;
+  --accent:#3b82f6;
+  --accent-2:#2563eb;
+  --gold:#f59e0b;
+  --gold-light:#fbbf24;
+  --ff-disp:'Sora',sans-serif;
+  --ff-body:'IBM Plex Sans',sans-serif;
+  --ff-mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--ff-body);
+  background:var(--navy);
+  color:var(--mut-2);
+  line-height:1.6;
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;
+  position:relative;overflow-x:hidden;
+}
+/* ambiance : dégradés + grille, repris du site S@FE */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(900px 600px at 85% -5%, rgba(37,99,235,.20), transparent 60%),
+    radial-gradient(800px 700px at -10% 20%, rgba(245,158,11,.08), transparent 55%),
+    linear-gradient(180deg,var(--navy),var(--navy-mid));
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(circle at 50% 30%,#000,transparent 80%);
+  mask-image:radial-gradient(circle at 50% 30%,#000,transparent 80%);
+}
+main{
+  position:relative;z-index:1;flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 22px;gap:6px;
+}
+/* logo bouclier */
+.shield{
+  width:104px;height:104px;border-radius:26px;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(59,130,246,.10),rgba(245,158,11,.07));
+  display:grid;place-items:center;position:relative;overflow:hidden;
+  margin-bottom:26px;
+  animation:rise .8s ease both;
+}
+.shield svg{width:58%;filter:drop-shadow(0 12px 26px rgba(59,130,246,.30))}
+.shield .scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);animation:scan 3.4s ease-in-out infinite}
+@keyframes scan{0%,100%{top:14%}50%{top:86%}}
+
+.brand{
+  font-family:var(--ff-disp);font-weight:800;font-size:clamp(2.4rem,7vw,3.6rem);
+  color:#fff;letter-spacing:-.03em;line-height:1;
+  animation:rise .8s .08s ease both;
+}
+.brand b{color:var(--gold)}
+.sub{
+  font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.42em;
+  color:var(--mut);font-weight:600;text-transform:uppercase;margin-top:8px;
+  animation:rise .8s .14s ease both;
+}
+.eyebrow{
+  font-family:var(--ff-mono);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--accent);font-weight:600;margin-top:34px;
+  animation:rise .8s .2s ease both;
+}
+h1{
+  font-family:var(--ff-disp);font-weight:800;color:#fff;
+  font-size:clamp(1.8rem,5vw,2.8rem);letter-spacing:-.02em;line-height:1.1;
+  margin-top:14px;max-width:18ch;
+  animation:rise .8s .26s ease both;
+}
+.lead{
+  font-size:1.05rem;color:var(--mut-2);max-width:54ch;margin-top:16px;
+  animation:rise .8s .32s ease both;
+}
+/* barre de progression indéterminée */
+.bar{
+  width:min(320px,80vw);height:6px;border-radius:999px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line);
+  overflow:hidden;margin-top:30px;
+  animation:rise .8s .38s ease both;
+}
+.bar span{
+  display:block;height:100%;width:40%;border-radius:999px;
+  background:linear-gradient(90deg,var(--accent-2),var(--gold-light));
+  animation:slide 2.2s ease-in-out infinite;
+}
+@keyframes slide{0%{transform:translateX(-110%)}100%{transform:translateX(310%)}}
+
+.tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:30px;animation:rise .8s .44s ease both}
+.tag{font-family:var(--ff-mono);font-size:.74rem;color:var(--mut-2);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:7px 13px;border-radius:999px}
+
+.contact{margin-top:30px;animation:rise .8s .5s ease both}
+.contact a{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;
+  font-family:var(--ff-disp);font-weight:700;font-size:.95rem;color:#fff;
+  background:linear-gradient(135deg,var(--accent-2),var(--accent));
+  padding:13px 24px;border-radius:13px;transition:.18s;
+}
+.contact a:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,99,235,.4)}
+
+/* pied : SIRET + ORIAS */
+footer{
+  position:relative;z-index:1;border-top:1px solid var(--line);
+  background:rgba(10,17,36,.6);padding:22px;text-align:center;
+}
+.legal{
+  font-family:var(--ff-mono);font-size:.74rem;color:var(--mut);
+  line-height:1.9;max-width:760px;margin:0 auto;
+}
+.legal .nm{color:var(--mut-2)}
+.orias{
+  display:inline-flex;align-items:center;gap:7px;
+  color:var(--gold-light);
+}
+.orias .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 0 rgba(245,158,11,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,158,11,.6)}70%{box-shadow:0 0 0 8px rgba(245,158,11,0)}100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}}
+
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important}
+}
+</style>
+</head>
+<body>
+  <main>
+    <div class="shield">
+      <div class="scan"></div>
+      <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 5 L90 22 V52 C90 80 72 98 50 105 C28 98 10 80 10 52 V22 Z" stroke="#3b82f6" stroke-width="2.4" fill="rgba(59,130,246,.06)"/>
+        <path d="M34 55 L46 67 L68 41" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="brand">S<b>@</b>FE</div>
+    <div class="sub">Assurances</div>
+
+    <span class="eyebrow">// Site en construction</span>
+    <h1>Notre site arrive bientôt.</h1>
+    <p class="lead">S@FE Assurances, votre courtier en assurances indépendant pour les particuliers, les familles et les entreprises. Nous préparons votre espace en ligne — il sera disponible très prochainement.</p>
+
+    <div class="bar"><span></span></div>
+
+    <div class="tags">
+      <span class="tag">// Particuliers &amp; familles</span>
+      <span class="tag">// Entreprises &amp; TPE/PME</span>
+      <span class="tag">// Conseil indépendant</span>
+    </div>
+
+    <div class="contact">
+      <a href="mailto:contact@safe-assurances.fr">✉ Nous contacter</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legal">
+      <span class="nm">S@FE</span> — SAS au capital variable · SIRET 104 699 558 00011 · 66 avenue des Champs-Élysées, 75008 Paris<br>
+      <span class="orias"><span class="dot"></span>Immatriculation ORIAS en cours</span> · © 2026 S@FE
+    </div>
+  </footer>
+</body>
+</html>
